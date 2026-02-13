@@ -1,1 +1,27 @@
-<p>about-us works!</p>
+<section class="AboutUs">
+  <div class="container mx-auto py-4">
+    <div class="AboutContainer flex flex-col">
+      <!-- Workers List -->
+      <div class="workers bg-blue-950 text-white p-4">
+        <ul class="workers-list flex justify-between pl-0">
+          @for (worker of workers; track worker.id) {
+            <li>
+              <button (click)="onSelectWorker(worker)" class="cursor-pointer hover:font-bold">
+                {{ worker.name }}
+              </button>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <!-- Selected Worker Detail -->
+      <div class="Information mt-6">
+        @if (selectedWorker) {
+          <app-worker [worker]="selectedWorker"></app-worker>
+        } @else {
+          <p>Please select a worker for extenden informations!</p>
+        }
+      </div>
+    </div>
+  </div>
+</section>
