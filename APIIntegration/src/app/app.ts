@@ -1,12 +1,24 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
-export class App {
-  protected readonly title = signal('APIIntegration');
+export class App implements OnInit {
+  todoList: any[] = [];
+  constructor(private http: HttpClient) {}
+  ngOnInit(): void {
+    this.getTodos();
+  }
+
+  getTodos() {
+    this.http.get('https://jsonplaceholder.typicode.com/posts').subscribe((result: any) => {
+      debugger;
+      this.todoList = result;
+    });
+  }
 }
