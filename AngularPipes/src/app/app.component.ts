@@ -17,6 +17,9 @@ export class AppComponent {
     newYork: 18.1214,
     paris: 72.1209001,
     chicago: 65.0775238,
+    bitola: 5.888,
+    skopje: 7.41233,
+    Athens: 14.5432,
   };
 
   historicTemperatures = [
