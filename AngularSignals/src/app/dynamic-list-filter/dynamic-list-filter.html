@@ -1,0 +1,11 @@
+<div class="text-center">
+  <p class="uppercase">dynamic-list-filter works!</p>
+
+  <input [value]="filter()" (input)="onFilteredFruits($event)" class="border p-2 mb-2" />
+
+  <ul>
+    @for (fruit of filteredFruitsArray; track $index) {
+      <li>{{ fruit }}</li>
+    }
+  </ul>
+</div>

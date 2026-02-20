@@ -1,0 +1,22 @@
+<p>Timer</p>
+<p>Seconds: {{ seconds() }}</p>
+<div class="flex g-4">
+  <button
+    (click)="startTimer()"
+    class="text-white bg-green-500 hover:bg-green-700 focus:ring-4 focus:ring-green-300 rounded px-4 py-2"
+  >
+    Start Timer
+  </button>
+  <button
+    (click)="stopTimer()"
+    class="text-white bg-red-500 hover:bg-red-700 focus:ring-4 focus:ring-red-300 rounded px-4 py-2"
+  >
+    Stop Timer
+  </button>
+  <button
+    (click)="restartTimer()"
+    class="text-white bg-yellow-500 hover:bg-yellow-700 focus:ring-4 focus:ring-yellow-300 rounded px-4 py-2"
+  >
+    Restart Timer
+  </button>
+</div>

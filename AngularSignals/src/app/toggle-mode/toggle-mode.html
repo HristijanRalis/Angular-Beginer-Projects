@@ -1,0 +1,13 @@
+<div class="text-center">
+  <p>Toggle-mode works!</p>
+
+  <button
+    (click)="toggleMode()"
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+  >
+    Toggle Mode
+  </button>
+  <p [ngClass]="isDarkMode() ? 'text-white bg-gray-800' : 'text-black bg-white'">
+    Current Mode: {{ isDarkMode() ? 'Dark' : 'Light' }}
+  </p>
+</div>

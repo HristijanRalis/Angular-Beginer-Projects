@@ -1,0 +1,12 @@
+<div class="text-center">
+  <p>Condition-render-signal works!</p>
+
+  @if (!isLoggedIn()) {
+    <button (click)="logIn()">Login</button>
+  }
+
+  @if (isLoggedIn()) {
+    <p>Welcome back!</p>
+    <button (click)="logOut()">Log Out</button>
+  }
+</div>

@@ -1,0 +1,7 @@
+<div class="text-center">
+  <p class="uppercase">Form-signals works!</p>
+
+  <input [value]="name()" (input)="onInput($event)" />
+
+  <p>Hello {{ name() }}</p>
+</div>
