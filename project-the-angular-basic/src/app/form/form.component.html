@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button
+      (click)="onReset()"
+      class="btn btn-primary rounded-btn"
+      [disabled]="userName.length === 0"
+    >
+      Reset
+    </button>
+    <button
+      (click)="onCreate()"
+      class="btn btn-secondary rounded-btn"
+      [disabled]="userName.length === 0"
+    >
+      Create
+    </button>
+    <div class="d-flex flex-column">
+      <label for="name" class="text-info">Username</label>
+
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="my-3 p-3"
+        placeholder="Enter name"
+        [(ngModel)]="userName"
+      />
+    </div>
+    <p *ngIf="userCreated" class="text-danger" style="font-size: 24px">
+      {{ userName }}
+    </p>
+  </div>
+</div>

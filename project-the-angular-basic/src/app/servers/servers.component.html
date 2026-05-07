@@ -1,5 +1,20 @@
 <p>servers works!</p>
-<app-server/>
-<app-server/>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        (click)="changeStatus()"
+        class="btn m-3"
+        [ngClass]="getButtonClass"
+      >
+        {{ status }}
+      </button>
+      <app-warning-alert />
+      <p>{{ isWarning }}</p>
+      <app-success-alert />
+      <p>{{ isSuccess }}</p>
 
-<app-server/>
+      <h2>{{ status }}</h2>
+    </div>
+  </div>
+</div>

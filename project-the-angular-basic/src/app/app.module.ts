@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningAlertComponent } from './warning-alert/warning-alert.component';
 import { SuccessAlertComponent } from './success-alert/success-alert.component';
+import { FormComponent } from './form/form.component';
+import { NgAssignmentComponent } from './ng-assignment/ng-assignment.component';
 
 @NgModule({
   declarations: [
@@ -13,8 +15,9 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
     ServersComponent,
     WarningAlertComponent,
     SuccessAlertComponent,
+    NgAssignmentComponent,
   ],
-  imports: [BrowserModule],
+  imports: [BrowserModule, FormComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Practicing Directives</h2>
+
+    <ol>
+      <li>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, neque.
+      </li>
+      <li>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, neque.
+      </li>
+      <li>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, neque.
+      </li>
+      <li>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, neque.
+      </li>
+      <li>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, neque.
+      </li>
+    </ol>
+    <hr />
+
+    <button class="btn btn-primary" (click)="onToggleDetails()">
+      Display details
+    </button>
+    <p *ngIf="showSecret">Secret Password = tuna</p>
+    <div
+      *ngFor="let logItem of log"
+      [ngStyle]="{ background: logItem >= 5 ? 'blue' : 'transparent' }"
+      [ngClass]="{ text: logItem >= 5 }"
+    >
+      {{ logItem }}
+    </div>
+  </div>
+</div>
