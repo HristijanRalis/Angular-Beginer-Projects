@@ -9,5 +9,5 @@ import { Recipe } from './recipes.model';
   styleUrl: './recipes.css',
 })
 export class Recipes {
-
+  selectedRecipe: Recipe;
 }

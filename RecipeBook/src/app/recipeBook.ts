@@ -4,8 +4,13 @@ import { Component, signal } from '@angular/core';
   selector: 'recipe-book-root',
   templateUrl: './recipeBook.html',
   standalone: false,
-  styleUrl: './recipeBook.css'
+  styleUrl: './recipeBook.css',
 })
 export class RecipeBook {
   protected readonly title = signal('RecipeBook');
+  loadedFeature = 'recipe';
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
 }
