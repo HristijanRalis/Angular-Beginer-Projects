@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Recipe } from '../../recipes.model';
+import { RecipeService } from '../../recipe.service';
 
 @Component({
   selector: 'app-recipe-item',
@@ -9,10 +10,11 @@ import { Recipe } from '../../recipes.model';
   styleUrl: './recipe-item.css',
 })
 export class RecipeItem {
-  @Input({required: true}) recipe: Recipe;
-  @Output() recipeSelected = new EventEmitter<void>();
+  @Input({ required: true }) recipe: Recipe;
+
+  constructor(private recipeService: RecipeService) {}
 
   onSelect() {
-    this.recipeSelected.emit();
+    this.recipeService.recipeSelected.emit(this.recipe);
   }
 }
